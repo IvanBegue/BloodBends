@@ -1,0 +1,201 @@
+@media only screen and (max-width:1400px) {
+    .form-group input {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .ticket-inner h5 {
+        font-size: 38px;
+        margin: 18px 0 28px;
+    }
+    .ticket-inner {
+        top: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .about-content h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .about-content p {
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    .home-banner h5 {
+        font-size: 40px;
+        margin: 25px 0 40px;
+    }
+    .artist-info ul li a {
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .btn-bar a {
+        font-size: 14px;
+        padding: 13px 25px;
+    }
+    .artist-info h2 {
+        font-size: 17px;
+    }
+    .artist-info h3 {
+        font-size: 14px;
+    }
+    .artist-info p {
+        width: 145%;
+    }
+    .gallery-overlay ul li a {
+        font-size: 15px;
+        width: 34px;
+        height: 34px;
+        line-height: 33px;
+    }
+    .testimonial-info {
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+    .ticket-inner h5 {
+        font-size: 42px;
+        margin: 25px 0 35px;
+    }
+    .ticket-inner ul li {
+        margin: 13px 0;
+    }
+    #contact:before {
+        left: 46%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .artist-info {
+        margin-top: 0px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    .testimonial-info p,
+    .artist-info p {
+        width: 100%;
+    }
+    .artist-info ul {
+        text-align: center;
+        display: inline-flex;
+    }
+    .gallery-padding:last-child {
+        margin-bottom: 0px;
+    }
+    .gallery-padding {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .gallery-padding img {
+        width: 100%;
+    }
+    .gallery-img {
+        text-align: center;
+    }
+    .artist-part {
+        padding-bottom: 0px;
+    }
+    .testimonial-info,
+    .testimonial-img {
+        text-align: center;
+    }
+    .testimonial-info h2 {
+        margin-top: 10px;
+    }
+    .ticket-img {
+        margin-bottom: 30px;
+    }
+    .ticket-img img {
+        width: 100%;
+        height: 370px;
+        object-fit: cover;
+    }
+    #ticket {
+        padding-bottom: 0px;
+    }
+    #invitation,
+    #contact {
+        padding-bottom: 0;
+    }
+    .contact-section input {
+        width: 360px;
+    }
+    .letter_inner p {
+        padding: 0 13%;
+        padding-bottom: 30px;
+    }
+    .letter_inner h2 {
+        font-size: 20px;
+    }
+    .tittle-content h2 {
+        font-size: 28px;
+    }
+    .tittle-content p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .home-banner h5 {
+        font-size: 35px;
+        margin: 25px 0 27px;
+    }
+    .home-banner .ban-txt {
+        padding-left: 7px;
+    }
+    .heading {
+        font-size: 28px;
+    }
+    .contact-section input {
+        width: 255px;
+        padding-left: 15px;
+        font-size: 13px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 11px;
+    }
+    .footer_text a {
+        font-size: 12px;
+    }
+    #back-top-btn {
+        width: 45px;
+        height: 45px;
+    }
+    .gallery .heading {
+        padding-top: 65px;
+    }
+    #gallery::before {
+        left: 41%;
+        top: -203px;
+    }
+    #loading-center-absolute {
+        position: absolute;
+        left: 50%;
+        top: 47%;
+        height: 100px;
+        width: 200px;
+        transform: translate(-50%, -50%);
+    }
+    #letter5 input {
+        width: 90%;
+    }
+    .letter_inner p {
+        padding: 0 5%;
+        padding-bottom: 30px;
+    }
+    .modal-content {
+        margin-top: 2%;
+    }
+    .modal-dialog {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .button {
+        margin-bottom: 20px;
+    }
+}
