@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,14 @@
 
 
     <!-- Home Banner Start -->
+=======
+	
+	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
+    
+    </head>
+    <body >
+        <!-- Home Banner Start -->
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
     <section class="home-banner" id="home">
         <div class="container">
             <div class="banner-content pt-120 pb-120">
@@ -146,7 +155,11 @@
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="about-thump wow slideInLeft animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: slideInLeft;">
+<<<<<<< HEAD
                         <img src="./assets/images/about/about-1.jpg" alt="about-image">
+=======
+                        <img src="../assets/images/about/about-1.jpg" alt="about-image">
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -330,6 +343,7 @@
     </div>
 
 
+<<<<<<< HEAD
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/isotope.pkgd.js"></script>
@@ -337,6 +351,15 @@
     <script src="./assets/js/jquery.magnific-popup.min.js"></script>
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/custom.js"></script>
+=======
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/isotope.pkgd.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
     <script src="js2/jquery-2.1.1.js"></script>
     <script src="js2/jquery.mixitup.min.js"></script>
     <script src="js2/main.js"></script> <!-- Resource jQuery -->
@@ -346,47 +369,83 @@
     // Define your artist data
     const artists = [{
             name: "Speed",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-1.png",
+=======
+            image: "../assets/images/artist/artist-1.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "Vampires are typically immortal or have greatly extended lifespans, often appearing young and unchanged over centuries."
         },
         {
             name: "Immortal",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-2.png",
+=======
+            image: "../assets/images/artist/artist-2.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "It was believed that on that day, the souls of the dead returned to their homes, so people dressed in costumes and lit bonfires to ward off spirits."
         },
         {
             name: "Shape-shifting",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-3.png",
+=======
+            image: "../assets/images/artist/artist-3.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "In some legends, vampires can transform into bats, wolves, or mist, allowing them to move stealthily or evade capture."
         },
         {
             name: "Speed",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-1.png",
+=======
+            image: "../assets/images/artist/artist-1.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "Vampires are typically immortal or have greatly extended lifespans, often appearing young and unchanged over centuries."
         },
         {
             name: "Immortal",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-2.png",
+=======
+            image: "../assets/images/artist/artist-2.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "It was believed that on that day, the souls of the dead returned to their homes, so people dressed in costumes and lit bonfires to ward off spirits."
         },
         {
             name: "Shape-shifting",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-3.png",
+=======
+            image: "../assets/images/artist/artist-3.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "In some legends, vampires can transform into bats, wolves, or mist, allowing them to move stealthily or evade capture."
         },
         {
             name: "Speed",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-1.png",
+=======
+            image: "../assets/images/artist/artist-1.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "Vampires are typically immortal or have greatly extended lifespans, often appearing young and unchanged over centuries."
         },
         {
             name: "Immortal",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-2.png",
+=======
+            image: "../assets/images/artist/artist-2.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "It was believed that on that day, the souls of the dead returned to their homes, so people dressed in costumes and lit bonfires to ward off spirits."
         },
         {
             name: "Shape-shifting",
+<<<<<<< HEAD
             image: "./assets/images/artist/artist-3.png",
+=======
+            image: "../assets/images/artist/artist-3.png",
+>>>>>>> aae7729f819e49e8f44da4c2ff4c28aa5b2518ea
             description: "In some legends, vampires can transform into bats, wolves, or mist, allowing them to move stealthily or evade capture."
         }
 
