@@ -529,6 +529,137 @@ border: 1px solid #fff;
 color: #170201;
 }
 
+
+/************ MODAL *******/
+/* Modal styles */
+.customize-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.customize-modal-content {
+    background-color: #1F2937; /* Dark modal background */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    color:white;
+}
+
+.customize-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.customize-close:hover,
+.customize-close:focus {
+    color: #fff;
+}
+
+/* Form styles */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px; /* Spacing above form controls */
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.customize-form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
+}
+
+.customize-form-group label {
+    margin-bottom: 8px; /* Spacing below labels */
+    display: block;
+}
+
+.customize-form-group input[type="radio"],
+.customize-form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.customize-btn-bar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.customize-btn-bar button {
+    background-color: #214EC7; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.customize-btn-bar button:hover {
+    background-color: #0B3D91; /* Button hover background color */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .customize-modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+    }
+
+    .form-control {
+        font-size: 14px; /* Decrease font size of form controls */
+    }
+
+    .customize-btn-bar button {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        margin-right: 5px; /* Reduce margin between buttons */
+    }
+}
+
+
+/* Styling for the upload button container */
+.upload-container {
+    margin-bottom: 20px;
+}
+
+/* Styling for the file input */
+.upload-container input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+/* Styling for the custom upload button */
+.upload-container .custom-upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #214EC7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Optional hover effect for the custom upload button */
+.upload-container .custom-upload-btn:hover {
+    background-color: #0B3D91;
+}
+
+
 /* ===========================================================
        About us Part
 ===============================================================*/
