@@ -862,7 +862,7 @@ font-size: 20px;
 color: #f7ea66;
 line-height: 24px;
 font-weight: 400;
-font-family: "Berkshire Swash";
+font-family: "Ariel";
 text-transform: capitalize;
 margin-top: 10px;
 padding-left: 15px;
@@ -875,7 +875,7 @@ color: #fff;
 line-height: 24px;
 font-weight: 400;
 padding-left: 15px;
-font-family: "Berkshire Swash";
+font-family: "Ariel";
 text-transform: capitalize;
 z-index: 9;
 }
@@ -1271,7 +1271,7 @@ html * {
 
 body {
 font-size: 1.6rem;
-font-family: 'Creepster', cursive;
+font-family: 'Ariel';
 color: #331d35;
 
 }
@@ -1897,3 +1897,6 @@ display: block;
 display: none;
 }
 }
+
+
+
