@@ -30,113 +30,9 @@ require_once "../db/pdo.php";
     
     </head>
     <body >
-    <section class="home-banner" id="home">
-        <div class="container">
-            <div class="banner-content pt-120 pb-120">
-
-                <h5 class="font-alt ban-txt wow fadeInDown animated animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Blood Blends</h5>
-                <p class="text-center wow fadeInUp animated animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"> "Indulge in the darkness of our Vampire Smoothie Bar, where each sip beckons with immortal flavors and chilling delights. Unleash your inner nightwalker with our blood-red blends and ethereal essences, crafted to satisfy even the most refined undead palate. Dare to taste eternity in every sip at our cryptic hideaway."</p>
-                <div class="btn-bar text-center">
-                    <a href="#" class="know-more-btn wow fadeInDown animated animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInDown;">Know More</a>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div id="customizeModal" class="customize-modal">
-            <div class="customize-modal-content">
-                <span class="customize-close">&times;</span>
-                <h2>Customize Your Smoothie</h2>
-                <br>
-                <form id="customizeForm">
-                    <div class="customize-form-group">
-                        <label>Base Options:</label>
-                        <select id="baseSelect" name="base" class="form-control">
-                            <option value="human-blood">Human Blood</option>
-                            <option value="animal-blood">Animal Blood</option>
-                        </select>
-                    </div>
-
-                    <div class="customize-form-group">
-                        <label>Flavour Options:</label>
-                        <select id="flavourSelect" name="flavour" class="form-control">
-                            <option value="lorem">Raspberry Blood</option>
-                            <option value="ipsum">Blackberry Essence</option>
-                        </select>
-                    </div>
-
-                    <div class="customize-form-group toppings-group">
-                        <label>Toppings:</label><br>
-                        <!-- Add custom vampire-themed topping names -->
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="chk1" value="1">
-                            <label class="form-check-label" for="chk1">Vampire Fangs</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="chk2" value="2">
-                            <label class="form-check-label" for="chk2">Bat Wings</label>
-                        </div>
-                        <!-- Add more vampire-themed toppings -->
-                    </div>
-
-                    <div class="customize-form-group toppings-group">
-                        <label>Cup Size:</label><br>
-                        <!-- Add custom vampire-themed topping names -->
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="chk1" value="1">
-                            <label class="form-check-label" for="chk1">Baby Vampire</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="chk2" value="2">
-                            <label class="form-check-label" for="chk2">Teen Vampire</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="chk2" value="2">
-                            <label class="form-check-label" for="chk2">Vampire Lord</label>
-                        </div>
-                        <!-- Add more vampire-themed toppings -->
-                    </div>
-
-                    <div class="customize-form-group">
-                        <label for="pickUpTime">Pick-up Time:</label>
-                        <input type="text" id="pickUpTime" name="pickUpTime" placeholder="Enter pick-up time" class="form-control">
-                    </div>
-
-                    <div class="customize-form-group">
-                        <label for="quantity">Quantity:</label>
-                        <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" class="form-control">
-                    </div>
-
-                    <div class="customize-form-group">
-                        <label>Payment Method:</label><br>
-                        <input type="radio" name="paymentMethod" value="Pick aup and pay"> Pick up and Pay<br>
-                        <input type="radio" name="paymentMethod" value="Pay By Juice"> Pay By Juice<br>
-                    </div>
-
-                    <div class="customize-form-group upload-container">
-                        <label for="uploadPicture">Upload Picture:</label>
-                        <input type="file" id="uploadPicture" name="uploadPicture">
-                        <button class="custom-upload-btn" onclick="document.getElementById('uploadPicture').click()">Choose File</button>
-                        <small class="form-text text-muted">Please upload a picture of your choice.</small>
-                    </div>
-
-
-                    <div class="customize-btn-bar text-center">
-                        <button type="button" id="customizeSubmitBtn">Submit</button>
-                        <button type="button" id="customizeCancelBtn">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-
-
-    </section>
-    <!-- Home Banner End -->
+    <?php include_once '../files/header.php' ?>
     
-        <!-- About us start-->
+        
         <!-- About us start-->
     <section class="section aboutus pt-120 pb-120" id="about">
         <div class="container">
@@ -344,6 +240,22 @@ Made with ❤️🧛‍♂️ by Team VERTEX
         <script src="../assets/js2/jquery-2.1.1.js"></script>
         <script src="../assets/js2/jquery.mixitup.min.js"></script>
         <script src="../assets/js2/main.js"></script> <!-- Resource jQuery -->
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/smoothScroll.js"></script>
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+  
     </body>
 
     <script>
