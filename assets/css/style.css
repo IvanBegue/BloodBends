@@ -256,6 +256,7 @@ margin-top: 80px;
 .navbar-nav {
 max-height: calc(100vh - 100px);
 overflow-y: auto;
+margin-left: 15%;
 }
 
 .header {
@@ -319,7 +320,7 @@ margin-top: 0;
 .nav-link {
 color: #fff;
 font-weight: 700;
-font-family: "Ariel", sans-serif;
+font-family: "Jost", sans-serif;
 text-transform: uppercase;
 }
 
@@ -455,79 +456,146 @@ max-inline-size: 63ch;
 margin: auto;
 }
 
-/*-----navber-----*/
+/* banner css design
+===================================*/
 
-.home-banner {
-background: url(https://img.freepik.com/free-vector/spooky-halloween-scene-with-evil-eyes_1048-14689.jpg?t=st=1714841186~exp=1714844786~hmac=a62bcef0ca64b33e0f7b316ea176e817772f23c705eb7e9f9aea6f114e2af829&w=826);
-background-size: cover;
-width: 100%;
-height: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-min-height: 600px;
-overflow: hidden;
-}
 
-.banner-content {
-text-align: center;
-max-width: 600px;
-margin: 0 auto;
-padding: 250px 0px;
-}
-
-.banner-content .ban-txt {
-position: relative;
-padding-left: 35px;
-z-index: 1;
-}
-
-.banner-content h2 {
-font-size: 20px;
-font-weight: 700;
-color: #fff;
-line-height: 24px;
-text-transform: uppercase;
-}
-
-.banner-content h5 {
-font-size: 60px;
-font-weight: 700;
-color: #fff;
-line-height: 24px;
-margin: 25px 0 50px;
-}
-
-.banner-content p {
-font-weight: 500;
-line-height: 24px;
-padding: 0 0 35px;
-color: #fff;
-}
-
-.btn-bar a {
-position: relative;
-display: inline-block;
-font-size: 18px;
-vertical-align: top;
-text-align: center;
-color: #fff;
-font-weight: 600;
-padding: 15px 30px;
-border-radius: 30px;
--webkit-transition: ease all .5s;
--moz-transition: ease all .5s;
--o-transition: ease all .5s;
-transition: all 0.5s ease-in-out;
-background: transparent;
-border: 1px solid #fff;
-}
-
-.btn-bar a:hover {
-background: #fff;
-border: 1px solid #fff;
-color: #170201;
-}
+.section-container-items{
+    padding:100px 0px 0px 0px;
+   
+  }
+  
+  
+  span, i, button, a{
+      text-decoration: none;
+      outline: none;
+  }
+  
+  .section a{
+      display: inline-block;
+  }
+  
+  .section h1{
+      font-size: 68px;
+      font-weight: 600;
+      text-transform: capitalize;
+      color: #f4f4f4;
+      letter-spacing: -0.21px;
+      line-height: 90px;
+      margin: 0; padding: 0;
+  }
+  
+  .section h3{
+      font-size: 20px;
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 0.30px;
+      padding: 0;
+      margin-top: 8px;
+      margin-left: 2px;
+      color: #fff;
+      opacity: 0.7;
+  }
+  
+  .section button{
+      margin-top: 30px;
+      display: block;
+      padding: 15px 24px;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.18px;
+      line-height: 17px;
+      border-radius: 50px;
+      background: #249af2;
+      border: none;
+      cursor: pointer;
+      color: #f4f4f4;
+      transition: all 250ms ease-in-out;
+  }
+  
+  
+  .section button i{
+      font-size: 14px;
+      margin-right: 8px;
+  }
+  
+  .section button span{
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.20px;
+      margin-left: 3px;
+  }
+  
+  .look {
+      color: #05cc47;
+      font-size: 3.7em;
+      transform: rotate(90deg);
+  }
+  
+  
+  .alta-title{
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0.7;
+      z-index: 1;
+      position: absolute;
+      right: 0; 
+      transform: rotate(90deg) translateY(-60px);
+  }
+  
+  .alta img {
+      width:100%;
+      height: auto;
+  }
+  
+  
+  
+  /* small screen device responsive 
+  ===================================*/
+  
+  @media  only screen and (min-width:1200px){
+  .nav-item > .nav-link{
+     padding:5px 20px!important;
+     display:block;
+  }
+  }
+  
+  @media  only screen and (max-width:992px){
+  .header-inner{
+    background-color:white;
+    width:100%!important;
+  }
+   .nav-item .nav-link {
+    color:black;
+  }
+  
+  .section h1{
+      font-size:40px!important;
+      line-height:55px!important;
+  }
+  
+  .navbar-brand{
+      color: #000!important;
+      font-weight:600;
+  }
+  
+  .content-banner .first-title {
+      font-size: 30px;
+  }
+  }
+  @media  only screen and (max-width:576px){
+  .search-model-form input {
+      width: 257px!important;
+      font-size: 20px!important;
+      border: none;
+      border-bottom: 2px solid #333;
+      background: none;
+      color: #999;
+  }
+  }
 
 
 /************ MODAL *******/
@@ -1898,5 +1966,107 @@ display: none;
 }
 }
 
+
+
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add margin at the bottom of each card */
+    background-color:#660000;
+}
+
+.card-img-top {
+    height: 200px; /* Adjust image height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.card-body {
+    padding: 1.25rem; /* Add padding inside the card body */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* Dark text color */
+}
+
+.card-text {
+    font-size: 14px;
+    color: #9aaab8; /* Dark gray text color */
+}
+
+.card-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.card-link:hover {
+    transform: translateY(-3px); /* Lift card slightly on hover */
+}
+
+.modal-body p {
+    
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.6; /* Adjust line height for readability */
+    color: #333; /* Set text color */
+}
+/* CSS for Modal Image */
+.modal-body img {
+    max-width: 100%; /* Ensure image width does not exceed modal body width */
+    height: 400px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the image horizontally within its container */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth effect */
+    margin-top: 20px;
+}
+
+.section.col-md-6 {
+    margin-bottom: 15%; /* Adjust the margin-top value as needed */
+}
+
+
+/* Custom CSS for form-check-label */
+.form-check-label {
+    font-weight: normal; /* Ensure normal font weight */
+    margin-left: 0.5rem; /* Add left margin for spacing */
+    color: #333; /* Set label text color */
+}
+
+/* Custom CSS for cup size options */
+.form-check-inline {
+    margin-right: 10px; /* Adjust spacing between options */
+}
+
+/* Ensure proper alignment of form-check-input */
+.form-check-input {
+    margin-top: 0.2rem; /* Adjust top margin for alignment */
+    vertical-align: middle; /* Align the input with the label vertically */
+}
+
+/* Style selected radio button label */
+.form-check-input:checked + .form-check-label {
+    font-weight: bold; /* Make the selected label bold */
+    color: #007bff; /* Change color of selected label */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .col-lg-2 {
+        flex-basis: 50%; /* Two smoothies per row on medium screens */
+    }
+}
+@media (max-width: 768px) {
+    .col-lg-2 {
+        flex-basis: 100%; /* One smoothie per row on small screens */
+    }
+}
 
 

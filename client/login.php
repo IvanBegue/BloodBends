@@ -18,7 +18,7 @@ if(isset($_POST["btnLogin"])){
   if ($count == 1) {
       session_start();
       $_SESSION["id"] = $row["u_id"];
-      header("Location: home.php");
+      header("Location: home.php?q=".$_SESSION["id"]);
       exit();
   } else {
       header("Location: login.php");

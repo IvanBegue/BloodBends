@@ -12,25 +12,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Products</a>
+        <a class="nav-link" href="#about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Watch</a>
+        <a class="nav-link" href="#artist">Smoothies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#power">Powers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resources</a>
+        <a class="nav-link" href="../client/about.php">Website</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../client/login.php">Login</a>
       </li>
      <li class="nav-item">
-        <a class="nav-link" href="#">Blogs</a>
+        <a class="nav-link" href="../client/register.php">Register</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-  <a href="">Buy Now</a>
-   <a class="my-2 my-sm-0 search-btn" id="search-switch"><i class="fas fa-search"></i> </a>   
-    </form>
+    
   </div>
 </nav>
   </div>
