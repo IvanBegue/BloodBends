@@ -38,7 +38,7 @@ if(isset($_POST["btnLogin"])){
 <head>
   <meta charset="UTF-8">
   <title>Login-BloodBends</title>
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -59,7 +59,7 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Creepster', cursive;
+  
   background: var(--background);
   color: var(--color);
   letter-spacing: 1px;
