@@ -3,7 +3,8 @@ session_start();
 require_once "../assets/template.php";
 require_once "../db/pdo.php";
 
-
+      
+        
 
 ?>
 
@@ -29,6 +30,13 @@ require_once "../db/pdo.php";
 	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
     
     </head>
+    <noscript>
+        <div style="background-color: #ffdddd; padding: 20px; margin-bottom: 20px; border-left: 6px solid #f44336;">
+            <strong>JavaScript Disabled</strong>
+            <p>For full functionality of this site it is necessary to enable JavaScript. 
+                Here are the <a href="https://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
+        </div>
+    </noscript>
     <body style="overflow-x: hidden;">
     <?php include_once '../files/header.php' ?>
 
@@ -208,73 +216,46 @@ require_once "../db/pdo.php";
 <h1 class="text-center mb-4" style="color: white;">Vampire Smoothies</h1>
 
     <div class="row" id="smoothie-grid">
+
+    <?php
+        $sql = "SELECT `smoothie_id`, `smoothie_name`, `smoothie_desc`, `smoothie_img`, `smoothie_price` FROM `tbl_smothie`";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+
+        if ($stmt->rowCount() > 0) {
+            // Loop through each row in the result set
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
+                        <img src="../uploads/gallery/<?php echo $row['smoothie_img']; ?>" class="card-img-top" alt="<?php echo $row['smoothie_name']; ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $row['smoothie_name']; ?></h5>
+                            <p class="card-text">Price: Rs. <?php echo $row['smoothie_price']; ?></p>
+                            <button class="btn btn-dark btn-block">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+        } else {
+            // If no results found
+            echo "No smoothies found.";
+        }
+
+    
+    ?>
        
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
-                <img src="../images/smoothie-1.jpeg" class="card-img-top" alt="Smoothie 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vampire's Delight</h5>
-                    <p class="card-text">Price: Rs. 200</p>
-                    <button class="btn btn-dark btn-block">Order Now</button>
-                </div>
-            </div>
-        </div>
+       
 
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
-                <img src="../client/assets/images/gallery/smoothie-1.jpeg" class="card-img-top" alt="Smoothie 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vampire's Delight</h5>
-                    <p class="card-text">Price: Rs. 200</p>
-                    <button class="btn btn-dark btn-block">Order Now</button>
-                </div>
-            </div>
-        </div>
+      
 
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
-                <img src="../client/assets/images/gallery/smoothie-1.jpeg" class="card-img-top" alt="Smoothie 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vampire's Delight</h5>
-                    <p class="card-text">Price: Rs. 200</p>
-                    <button class="btn btn-dark btn-block">Order Now</button>
-                </div>
-            </div>
-        </div>
+       
 
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
-                <img src="../client/assets/images/gallery/smoothie-1.jpeg" class="card-img-top" alt="Smoothie 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vampire's Delight</h5>
-                    <p class="card-text">Price: Rs. 200</p>
-                    <button class="btn btn-dark btn-block">Order Now</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
-                <img src="../client/assets/images/gallery/smoothie-1.jpeg" class="card-img-top" alt="Smoothie 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vampire's Delight</h5>
-                    <p class="card-text">Price: Rs. 200</p>
-                    <button class="btn btn-dark btn-block">Order Now</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100 smoothie-card" data-toggle="modal" data-target="#ratingModal">
-                <img src="../client/assets/images/gallery/smoothie-1.jpeg" class="card-img-top" alt="Smoothie 1">
-                <div class="card-body">
-                    <h5 class="card-title">Vampire's Delight</h5>
-                    <p class="card-text">Price: Rs. 200</p>
-                    <button class="btn btn-dark btn-block">Order Now</button>
-                </div>
-            </div>
-        </div>
-
+    </div>
 
 
     <!-- View All Button -->
@@ -377,7 +358,7 @@ require_once "../db/pdo.php";
 
 Made with ❤️🧛‍♂️ by Team VERTEX
 </p>
-                            </div>
+                     </div>
                             <button class="top-btn" style="opacity: 0;"><i class="fa-solid fa-chevron-up"></i></button>
                         </div>
                     </div>

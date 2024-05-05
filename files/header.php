@@ -29,6 +29,12 @@
      <li class="nav-item">
         <a class="nav-link" href="../client/register.php">Register</a>
       </li>
+      <li class="nav-item">
+      <a href="https://bff.ecoindex.fr/redirect/?url=https://vertex.maurice.webcup.hodi.host/client/home" target="_blank">
+        <img src="https://bff.ecoindex.fr/badge/?theme=light&url=https://vertex.maurice.webcup.hodi.host/client/home" alt="Ecoindex Badge" />
+    </a>
+        
+      </li>
     </ul>
     
   </div>
