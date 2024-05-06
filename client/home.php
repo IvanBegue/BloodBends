@@ -3,56 +3,26 @@ session_start();
 require_once "../assets/template.php";
 require_once "../db/pdo.php";
 
-<<<<<<< HEAD
 
 
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        // Start the SQL transaction
+        //Start the SQL transaction
         $pdo->beginTransaction();
-
-        // Insert into quick_order table
-        $price = $_POST['price']; 
-        $payment = $_POST['payment']; 
+        
+        
         
         $quantity = $_POST['quantity']; 
         $datePick = $_POST['pickUpTime']; 
 
         // Prepare the SQL statement to insert into the quick_order table
-        $insertQuickOrderQuery = "INSERT INTO quick_order (price, payment, quantity, datePick) VALUES (?, ?, ?, ?)";
+        $insertQuickOrderQuery = "INSERT INTO quick_order (quantity, datePick) VALUES (?, ?, ?, ?)";
         $insertQuickOrderStmt = $pdo->prepare($insertQuickOrderQuery);
-        $insertQuickOrderStmt->execute([$price, $payment, $quantity, $datePick]);
+        $insertQuickOrderStmt->execute([$quantity, $datePick]);
 
-        // Retrieve the ID of the inserted quick_order record
-        $quickOrderId = $pdo->lastInsertId();
-
-        // Iterate over the POST data to extract selected options for each customization
-        foreach ($_POST as $key => $value) {
-            // Check if the key starts with "customization_" (indicating a customization field)
-            if (strpos($key, 'customization_') === 0) {
-                // Get the customization ID from the key
-                $customizationId = substr($key, strlen('customization_'));
-
-                // Check if the value is an array (indicating checkboxes)
-                if (is_array($value)) {
-                    // Iterate over selected checkbox values
-                    foreach ($value as $optionId) {
-                        // Prepare the SQL statement to insert selected options into the database
-                        $insertSelectedOptionQuery = "INSERT INTO selected_options (quick_order_id, customization_id, option_id) VALUES (?, ?, ?)";
-                        $insertSelectedOptionStmt = $pdo->prepare($insertSelectedOptionQuery);
-                        $insertSelectedOptionStmt->execute([$quickOrderId, $customizationId, $optionId]);
-                    }
-                } else {
-                    // For dropdowns (single selection), $value contains the selected option ID
-                    // Prepare the SQL statement to insert the selected option into the database
-                    $insertSelectedOptionQuery = "INSERT INTO selected_options (quick_order_id, customization_id, option_id) VALUES (?, ?, ?)";
-                    $insertSelectedOptionStmt = $pdo->prepare($insertSelectedOptionQuery);
-                    $insertSelectedOptionStmt->execute([$quickOrderId, $customizationId, $value]);
-                }
-            }
-        }
+        
 
         // Commit the transaction
         $pdo->commit();
@@ -67,12 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $e->getMessage();
     }
 }
-
-=======
-      
-        
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
-
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="NextGenerationDev">
         <title> Vampire Smoothie</title>
-<<<<<<< HEAD
         
 
         <!-- jQuery UI theme CSS -->
@@ -98,7 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="../assets/css/responsive.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-=======
         <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="../assets/css/all.min.css">
@@ -109,15 +71,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="../assets/css/responsive.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
 	
 	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
     
     </head>
-<<<<<<< HEAD
     <body >
     <section class="home-banner" id="home">
-=======
     <noscript>
         <div style="background-color: #ffdddd; padding: 20px; margin-bottom: 20px; border-left: 6px solid #f44336;">
             <strong>JavaScript Disabled</strong>
@@ -130,7 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <div class="section-container-items" style="overflow-y: hidden;">
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
         <div class="container">
         <div class="row align-items-center h-100">
         <div class="section col-md-6" style="margin-top: 20px;">
@@ -149,15 +107,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         sip at our cryptic hideaway."
     </h3>
 
-<<<<<<< HEAD
                 <h5 class="font-alt ban-txt wow fadeInDown animated animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown; font-family:Arial, Helvetica, sans-serif">Blood Blends</h5>
                 <p class="text-center wow fadeInUp animated animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; font-family:Arial, Helvetica, sans-serif"> "Indulge in the darkness of our Vampire Smoothie Bar, where each sip beckons with immortal flavors and chilling delights. Unleash your inner nightwalker with our blood-red blends and ethereal essences, crafted to satisfy even the most refined undead palate. Dare to taste eternity in every sip at our cryptic hideaway."</p>
                 <div class="btn-bar text-center">
                     <a href="#" class="know-more-btn wow fadeInDown animated animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInDown; font-family:Arial, Helvetica, sans-serif">Know More</a>
-=======
     <div class="btn-bar text-center">
                     <a href="#" class="know-more-btn wow fadeInDown animated animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInDown;">Know More</a>
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
                 </div>
 </div>
 
@@ -234,6 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Handle database connection errors
         echo "Error: " . $e->getMessage();
     }
+
     ?>
                     <div class="customize-form-group">
                         <label for="pickUpTime">Pick-up Time:</label>
@@ -247,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="customize-form-group">
                         <label>Payment Method:</label><br>
-                        <input type="radio" name="paymentMethod" value="Pick"  name="rndPick"> Pick up and Pay<br>
+                        <input type="radio" name="paymentMethod" value="Pick"  name="rndPick" > Pick up and Pay<br>
                         <input type="radio" name="paymentMethod" value="Juice" name="rndJuice"> Pay By Juice<br>
                     </div>
 
@@ -265,14 +221,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-<<<<<<< HEAD
 
     </section>
     <!-- Home Banner End -->
     
         <!-- About us start-->
-=======
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
         <!-- About us start-->
     <section class="section aboutus pt-120 pb-120" id="about">
         <div class="container">
@@ -312,13 +265,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <!-- About us end-->
         <hr class="border-line">
-<<<<<<< HEAD
         <!-- About us end-->
     
 
 
         <main class="cd-main-content">
-            <div class="cd-tab-filter-wrapper">
                 <div class="cd-tab-filter">
 
                     <ul class="cd-filters">
@@ -402,13 +353,11 @@ Made with ❤️🧛‍♂️ by Team VERTEX
                             </div>
                             <button class="top-btn" style="opacity: 0;"><i class="fa-solid fa-chevron-up"></i></button>
                         </div>
-=======
     
 
 <!-- Artist Section -->
 <section class="artist-part pt-120 pb-120" id="artist">
 <div class="container mt-5">
-<h1 class="text-center mb-4" style="color: white;">Vampire Smoothies</h1>
 
     <div class="row" id="smoothie-grid">
 
@@ -526,13 +475,10 @@ Made with ❤️🧛‍♂️ by Team VERTEX
 
                         <!-- Confirm Order Button -->
                         <button class="btn btn-dark btn-block mt-4">Confirm Order</button>
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
                     </div>
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-        
     
         <script src="../assets/js/jquery-3.6.0.min.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
@@ -547,7 +493,6 @@ Made with ❤️🧛‍♂️ by Team VERTEX
     </body>
     
 
-=======
     </div>
 </div>
 
@@ -608,7 +553,6 @@ Made with ❤️🧛‍♂️ by Team VERTEX
 
     </body>
 
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
     <script>
   // Define your artist data
   const artists = [{
@@ -742,8 +686,6 @@ Made with ❤️🧛‍♂️ by Team VERTEX
         };
     });
         
-<<<<<<< HEAD
-=======
 
       // jQuery to hide/show smoothie grids and button on click
       $(document).ready(function() {
@@ -789,6 +731,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
->>>>>>> e9e991e25490292d69c6acf82edaac76ad6c02c0
     </script>
 </html>
